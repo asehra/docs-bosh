@@ -189,8 +189,8 @@ Displays table that lists events based on filters specified. See [events details
 <pre class="terminal">$ bosh disks --orphaned</pre>
 Displays disk CID, previous deployment and instance, and orphaned date of all orphaned persistent disks.
 
-<pre class="terminal">$ bosh attach disk DISK_ID INSTANCE_NAME/ID</pre>
-Attaches persistent disk to given instance. Instance must be in the stopped state.
+<pre class="terminal">$ bosh attach disk INSTANCE_NAME INSTANCE_ID DISK_CID</pre>
+Attaches persistent disk to given instance. Instance must be in the stopped state. `INSTANCE_ID` is the GUID that you see next to instance when you run `bosh instances --details` and not the Instance index after `/`.
 
 ---
 ### <a id="snapshots"></a> Snapshots
